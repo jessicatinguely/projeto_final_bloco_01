@@ -3,6 +3,10 @@ package projeto_final_bloco_01;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import projeto_final_bloco_01.model.Carne;
+import projeto_final_bloco_01.model.Frango;
+import projeto_final_bloco_01.model.Suino;
+import projeto_final_bloco_01.model.Tempero;
 import projeto_final_bloco_01.util.Cores;
 
 public class Menu {
@@ -11,6 +15,19 @@ public class Menu {
 	public static void main(String[] args) {
 
 		int opcao;
+		
+		Carne carne1 = new Carne(1, "Picanha", 59.90f, 500f, "Picanha");
+		carne1.visualizar();
+
+		Frango frango1 = new Frango(2, "Coxa e Sobrecoxa", 22.00f, 800f, "Coxa e Sobrecoxa");
+		frango1.visualizar();
+
+		Suino suino1 = new Suino(3, "Costelinha", 34.50f, 700f, "Costelinha");
+		suino1.visualizar();
+
+		Tempero tempero1 = new Tempero(4, "Sal Grosso", 5.00f, 1000f, "Sal Grosso");
+		tempero1.visualizar();
+
 	
 	while (true) {
 
@@ -61,6 +78,7 @@ public class Menu {
 		}
 
 		// Controle de fluxo do menu
+		// Verifica qual opção do menu o usuário escolheu e executa a ação
 		switch (opcao) {
 		case 1:// Aqui vamos implementar a criação de um novo produto (CRUD - Create)
 			System.out.println(Cores.TEXT_WHITE + "Criar Produto\n\n");
